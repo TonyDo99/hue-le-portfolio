@@ -1,11 +1,6 @@
 // import images
 import Hero_person from "./assets/images/avatar.png";
 
-import project1 from "./assets/images/projects/img1.png";
-import project2 from "./assets/images/projects/img2.png";
-import project3 from "./assets/images/projects/img3.png";
-import person_project from "./assets/images/projects/person.png";
-
 import Hireme_person from "./assets/images/Hireme/person.png";
 import Hireme_person2 from "./assets/images/Hireme/person2.png";
 
@@ -115,25 +110,6 @@ export const content = {
         title: "EUROFINS",
         para: "CERTIFICATE OF COMPLETION Overview of IA rule & Food Defense",
         logo: certificate,
-      },
-    ],
-  },
-  Projects: {
-    title: "Projects",
-    subtitle: "MY CREATION",
-    image: person_project,
-    project_content: [
-      {
-        title: "Gym Website",
-        image: project1,
-      },
-      {
-        title: "Social Media web",
-        image: project2,
-      },
-      {
-        title: "Creative Website",
-        image: project3,
       },
     ],
   },
