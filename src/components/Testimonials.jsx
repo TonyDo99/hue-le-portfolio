@@ -36,6 +36,8 @@ const Testimonials = () => {
           }}
           modules={[Pagination]}
           className="md:h-96 h-[40rem] max-w-3xl"
+          preventClicks={false}
+          preventClicksPropagation={false}
         >
           {Testimonials.testimonials_content.map((content, i) => (
             <SwiperSlide key={i}>
