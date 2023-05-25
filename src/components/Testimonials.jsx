@@ -41,8 +41,8 @@ const Testimonials = () => {
             <SwiperSlide key={i}>
               <div
                 className={`duration-500 bg-bg_light_primary mx-8 border-2 
-              px-8 pt-6 h-full rounded-2xl flex items-center gap-6
-              overflow-scroll border-slate-200 md:flex-row flex-col
+                px-8 pt-6 h-full rounded-2xl flex items-center gap-6 scroll-down-overflow
+               border-slate-200 md:flex-row flex-col
                 ${activeIndex !== i && "scale-75 blur-sm"}`}
               >
                 <div className="h-24 w-40">
