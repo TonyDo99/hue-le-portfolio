@@ -3,7 +3,7 @@
 import { HiOutlineArrowNarrowDown } from "react-icons/hi";
 import { content } from "../Content";
 const Hero = () => {
-  const { hero } = content;
+  const { hero, education } = content;
 
   return (
     <section id="home" className="overflow-hidden">
@@ -23,13 +23,20 @@ const Hero = () => {
         <div className="pb-16 px-6 pt-5" data-aos="fade-down">
           <h2>{hero.title}</h2>
           <br />
+          <div className="flex flex-col w-80 gap-y-4">
+            <p className="font-semibold">{education.certificate}</p>
+            <p className="font-semibold">
+              GPA: <span className="font-normal">{education.gpa}</span>
+            </p>
+          </div>
+          <br />
           <div className="flex justify-end">
             <a className="btn flex items-center" href="#contact">
               <HiOutlineArrowNarrowDown className="mr-2 animate-bounce" />
               {hero.btnText}
             </a>
           </div>
-          <div className="flex flex-col gap-10 mt-10">
+          <div className="flex flex-col gap-5 mt-10">
             {hero.hero_content.map((content, i) => (
               <div
                 key={i}

@@ -3,8 +3,9 @@ import Hero from "./components/Hero";
 import Navbar from "./Layouts/Navbar";
 import Skills from "./components/Skills";
 import Service from "./components/Services";
-import Testimonials from "./components/Testimonials";
+import Award from "./components/Award";
 import Contact from "./components/Contact";
+import Experiences from "./components/Experience";
 import { useEffect } from "react";
 // Animation package
 import Aos from "aos";
@@ -24,8 +25,9 @@ const App = () => {
       <Hero />
       <Skills />
       <Service />
+      <Award />
       {/* <Projects /> */}
-      <Testimonials />
+      <Experiences />
       {/* <Hireme /> */}
       <Contact />
       <footer className="p-3 text-center">
