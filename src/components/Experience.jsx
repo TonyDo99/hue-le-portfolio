@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Timeline } from "antd";
 
 // Import Swiper React components
@@ -9,7 +9,6 @@ import { EffectCards } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-import "./cart.css";
 import { content } from "../Content";
 import { TbDiscountCheck } from "react-icons/tb";
 import { BsCalendar2Date } from "react-icons/bs";
@@ -56,43 +55,41 @@ const TimeWork = ({ props, style }) => {
 const SwiperCart = ({ company, style }) => {
   return (
     <div className={style}>
-      <div className="w-[690px]">
-        <div
-          data-aos="zoom-out"
-          data-aos-duration="900"
-          data-aos-delay="200"
-          className="w-fit ml-20"
+      <div
+        data-aos="zoom-out"
+        data-aos-duration="900"
+        data-aos-delay="200"
+        className="w-fit ml-20"
+      >
+        <Swiper
+          effect={"cards"}
+          grabCursor={true}
+          modules={[EffectCards]}
+          className="mySwiper hover:-translate-y-5 duration-300 w-60 h-80"
         >
-          <Swiper
-            effect={"cards"}
-            grabCursor={true}
-            modules={[EffectCards]}
-            className="mySwiper hover:-translate-y-5 duration-300"
-          >
-            {company.length &&
-              company.map((element, index) => (
-                <SwiperSlide
-                  key={index}
-                  className="outline-none outline-offset-0 hover:transition-all hover:duration-500 hover:outline outline-2 hover:outline-[#2CAAA0] shadow-lg shadow-cyan-500/50"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    borderRadius: "18px",
-                    fontSize: "22px",
-                    fontWeight: "bold",
-                    color: "#fff",
-                  }}
-                >
-                  <img
-                    className="object-cover object-center w-full h-full cursor-pointer transition-opacity duration-500"
-                    src={element.imageUrl}
-                    alt={element.alt}
-                  />
-                </SwiperSlide>
-              ))}
-          </Swiper>
-        </div>
+          {company.length &&
+            company.map((element, index) => (
+              <SwiperSlide
+                key={index}
+                className="outline-none outline-offset-0 hover:transition-all hover:duration-500 hover:outline outline-2 hover:outline-[#2CAAA0] shadow-lg shadow-cyan-500/50"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: "18px",
+                  fontSize: "22px",
+                  fontWeight: "bold",
+                  color: "#fff",
+                }}
+              >
+                <img
+                  className="object-cover object-center w-full h-full cursor-pointer transition-opacity duration-500"
+                  src={element.imageUrl}
+                  alt={element.alt}
+                />
+              </SwiperSlide>
+            ))}
+        </Swiper>
       </div>
     </div>
   );
@@ -123,7 +120,7 @@ function Experiences() {
         <br />
         <div className="grid place-items-center pt-14">
           <Timeline
-            mode="left"
+            mode={`${window.innerWidth < 1920 ? "left" : "alternate"}`}
             items={[
               {
                 label: (
@@ -137,11 +134,10 @@ function Experiences() {
                     }}
                   />
                 ),
-                children: (
-                  <SwiperCart company={content.Carts.icoc} style={"ml-10"} />
-                ),
+                children: <SwiperCart company={content.Carts.icoc} />,
                 style: {
-                  paddingBottom: "70px",
+                  marginBottom: "70px",
+                  width: `${window.innerWidth < 1920 ? "850px" : "900px"}`,
                 },
               },
               {
@@ -169,7 +165,7 @@ function Experiences() {
                   />
                 ),
                 style: {
-                  paddingBottom: "70px",
+                  marginBottom: "70px",
                 },
               },
               {
@@ -184,7 +180,7 @@ function Experiences() {
                 ),
                 children: <SwiperCart company={content.Carts.haccp} />,
                 style: {
-                  paddingBottom: "70px",
+                  marginBottom: "70px",
                 },
               },
               {
@@ -199,7 +195,7 @@ function Experiences() {
                 ),
                 children: <SwiperCart company={content.Carts.englishCenter} />,
                 style: {
-                  paddingBottom: "70px",
+                  marginBottom: "70px",
                 },
               },
             ]}

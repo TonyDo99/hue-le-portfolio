@@ -2,7 +2,7 @@
 import Hero from "./components/Hero";
 import Navbar from "./Layouts/Navbar";
 import Skills from "./components/Skills";
-import Service from "./components/Services";
+import Cetification from "./components/Cetification";
 import Award from "./components/Award";
 import Contact from "./components/Contact";
 import Experiences from "./components/Experience";
@@ -24,7 +24,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <Skills />
-      <Service />
+      <Cetification />
       <Award />
       {/* <Projects /> */}
       <Experiences />

@@ -11,12 +11,8 @@ import teamwork from "./assets/icons/teamwork.png";
 import work from "./assets/icons/work.png";
 import certificate from "./assets/icons/certificate.png";
 import iso from "./assets/icons/iso.png";
-
-// import logo
-import icoc from "./assets/logos/icoc.png";
-import novaliches from "./assets/logos/novaliches.png";
-import hufi from "./assets/logos/hufi.jpeg";
-import english from "./assets/logos/english.avif";
+import office from "./assets/icons/office.png";
+import languages from "./assets/icons/languages.png";
 
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
@@ -100,23 +96,33 @@ export const content = {
     subtitle: "MY TOP SKILLS",
     skills_content: [
       {
+        name: "Microsoft office tools",
+        para: "7/10",
+        logo: office,
+      },
+      {
+        name: "English",
+        para: "8/10",
+        logo: languages,
+      },
+      {
         name: "Flexibility",
-        para: "Lorem ipsum text  dummy",
+        para: "10/10",
         logo: flexibility,
       },
       {
         name: "Adaptability",
-        para: "Lorem ipsum text  dummy",
+        para: "10/10",
         logo: adaptation,
       },
       {
         name: "Teamwork",
-        para: "Lorem ipsum text  dummy",
+        para: "10/10",
         logo: teamwork,
       },
       {
         name: "Working under pressure",
-        para: "Lorem ipsum text  dummy",
+        para: "10/10",
         logo: work,
       },
     ],
