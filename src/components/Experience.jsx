@@ -107,6 +107,8 @@ const DotCustom = ({ logo }) => {
   );
 };
 
+console.log(window.innerWidth);
+
 function Experiences() {
   return (
     <section id="exp">
@@ -120,7 +122,7 @@ function Experiences() {
         <br />
         <div className="grid place-items-center pt-14">
           <Timeline
-            mode={`${window.innerWidth < 1920 ? "left" : "alternate"}`}
+            mode={`${window.innerWidth < 500 ? "left" : "alternate"}`}
             items={[
               {
                 label: (
@@ -137,7 +139,7 @@ function Experiences() {
                 children: <SwiperCart company={content.Carts.icoc} />,
                 style: {
                   marginBottom: "70px",
-                  width: `${window.innerWidth < 1920 ? "850px" : "900px"}`,
+                  width: `${window.innerWidth < 1650 ? "850px" : "900px"}`,
                 },
               },
               {
