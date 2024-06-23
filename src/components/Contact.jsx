@@ -1,7 +1,7 @@
-import { createElement, useRef } from "react";
-import { content } from "../Content";
-import emailjs from "@emailjs/browser";
-import toast, { Toaster } from "react-hot-toast";
+import { createElement, useRef } from 'react';
+import { content } from '../Content';
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
   const { Contact } = content;
@@ -13,17 +13,17 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        'YOUR_SERVICE_ID',
+        'YOUR_TEMPLATE_ID',
         form.current,
-        "YOUR_PUBLIC_KEY"
+        'YOUR_PUBLIC_KEY'
       )
       .then(
         (result) => {
           // Clear all input field values
           form.current.reset();
           // Success toast message
-          toast.success("Email send Successfully");
+          toast.success('Email send Successfully');
         },
         (error) => {
           console.log(error.text);
@@ -35,7 +35,7 @@ const Contact = () => {
   return (
     <section className="bg-dark_primary text-white" id="contact">
       <Toaster />
-      <div className="md:container px-5 py-14">
+      <div className="md:container px-5 py-14 mt-[450px]">
         <h2 className="title !text-white" data-aos="fade-down">
           {Contact.title}
         </h2>

@@ -1,23 +1,25 @@
-import React, { useState } from "react";
-import { Timeline } from "antd";
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
+import { Timeline } from 'antd';
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCards } from 'swiper';
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-cards";
+import 'swiper/css';
+import 'swiper/css/effect-cards';
 
-import { content } from "../Content";
-import { TbDiscountCheck } from "react-icons/tb";
-import { BsCalendar2Date } from "react-icons/bs";
+import { content } from '../Content';
+import { TbDiscountCheck } from 'react-icons/tb';
+import { BsCalendar2Date } from 'react-icons/bs';
 
 // Import images
-import icoc from "../assets/logos/icoc.png";
-import novaliches from "../assets/logos/novaliches.png";
-import haccp from "../assets/logos/haccp.jpg";
-import englishLogo from "../assets/logos/english.avif";
+import icoc from '../assets/logos/icoc.png';
+import novaliches from '../assets/logos/novaliches.png';
+import haccp from '../assets/logos/haccp.jpg';
+import englishLogo from '../assets/logos/english.avif';
+import cpcLogo from '../assets/logos/cpc.jpeg';
 
 const TimeWork = ({ props, style }) => {
   const { company, role, endDate } = props;
@@ -35,14 +37,14 @@ const TimeWork = ({ props, style }) => {
             role.map((element, index) => (
               <div key={index} className="flex justify-center items-center">
                 <span className="mr-2">
-                  <TbDiscountCheck size={20} color={"#2CAAA0"} />
+                  <TbDiscountCheck size={20} color={'#2CAAA0'} />
                 </span>
                 <p>{element}</p>
               </div>
             ))}
           <div className="flex justify-center items-center">
             <div className="mr-2">
-              <BsCalendar2Date size={20} color={"#2CAAA0"} />
+              <BsCalendar2Date size={20} color={'#2CAAA0'} />
             </div>
             <span className="font-bold text-neutral-700">{endDate}</span>
           </div>
@@ -62,7 +64,7 @@ const SwiperCart = ({ company, style }) => {
         className="w-fit ml-20"
       >
         <Swiper
-          effect={"cards"}
+          effect={'cards'}
           grabCursor={true}
           modules={[EffectCards]}
           className="mySwiper hover:-translate-y-5 duration-300 w-60 h-80"
@@ -73,13 +75,13 @@ const SwiperCart = ({ company, style }) => {
                 key={index}
                 className="outline-none outline-offset-0 hover:transition-all hover:duration-500 hover:outline outline-2 hover:outline-[#2CAAA0] shadow-lg shadow-cyan-500/50"
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: "18px",
-                  fontSize: "22px",
-                  fontWeight: "bold",
-                  color: "#fff",
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderRadius: '18px',
+                  fontSize: '22px',
+                  fontWeight: 'bold',
+                  color: '#fff',
                 }}
               >
                 <img
@@ -95,9 +97,9 @@ const SwiperCart = ({ company, style }) => {
   );
 };
 
-const DotCustom = ({ logo }) => {
+const DotCustom = ({ logo, customStyle = '' }) => {
   return (
-    <div className="w-20 h-20">
+    <div className={twMerge('w-20 h-20', customStyle)}>
       <img
         className="object-fill rounded-full"
         src={logo.imageUrl}
@@ -106,8 +108,6 @@ const DotCustom = ({ logo }) => {
     </div>
   );
 };
-
-console.log(window.innerWidth);
 
 function Experiences() {
   return (
@@ -122,31 +122,31 @@ function Experiences() {
         <br />
         <div className="grid place-items-center pt-14">
           <Timeline
-            mode={`${window.innerWidth < 500 ? "left" : "alternate"}`}
+            mode={`${window.innerWidth < 500 ? 'left' : 'alternate'}`}
             items={[
               {
                 label: (
-                  <TimeWork props={content.WorkTimeLine.icoc} style={"pr-8"} />
+                  <TimeWork props={content.WorkTimeLine.icoc} style={'pr-8'} />
                 ),
                 dot: (
                   <DotCustom
                     logo={{
                       imageUrl: icoc,
-                      alt: "icoc",
+                      alt: 'icoc',
                     }}
                   />
                 ),
                 children: <SwiperCart company={content.Carts.icoc} />,
                 style: {
-                  marginBottom: "70px",
-                  width: `${window.innerWidth < 1650 ? "850px" : "900px"}`,
+                  marginBottom: '70px',
+                  width: `${window.innerWidth < 1650 ? '850px' : '900px'}`,
                 },
               },
               {
                 label: (
                   <TimeWork
                     props={content.WorkTimeLine.novaliches}
-                    style={"pl-8"}
+                    style={'pl-8'}
                   />
                 ),
                 dot: (
@@ -154,7 +154,7 @@ function Experiences() {
                     <DotCustom
                       logo={{
                         imageUrl: novaliches,
-                        alt: "novaliches",
+                        alt: 'novaliches',
                       }}
                     />
                   </div>
@@ -163,11 +163,11 @@ function Experiences() {
                   <SwiperCart
                     // className="mr-5"
                     company={content.Carts.novaliches}
-                    style={"mr-52"}
+                    style={'mr-52'}
                   />
                 ),
                 style: {
-                  marginBottom: "70px",
+                  marginBottom: '70px',
                 },
               },
               {
@@ -176,13 +176,13 @@ function Experiences() {
                   <DotCustom
                     logo={{
                       imageUrl: haccp,
-                      alt: "haccp",
+                      alt: 'haccp',
                     }}
                   />
                 ),
                 children: <SwiperCart company={content.Carts.haccp} />,
                 style: {
-                  marginBottom: "70px",
+                  marginBottom: '70px',
                 },
               },
               {
@@ -191,13 +191,35 @@ function Experiences() {
                   <DotCustom
                     logo={{
                       imageUrl: englishLogo,
-                      alt: "english",
+                      alt: 'english',
                     }}
                   />
                 ),
                 children: <SwiperCart company={content.Carts.englishCenter} />,
                 style: {
-                  marginBottom: "70px",
+                  marginBottom: '70px',
+                },
+              },
+              {
+                label: (
+                  <TimeWork props={content.WorkTimeLine.cpc} style={'pl-8'} />
+                ),
+                dot: (
+                  <div className="-ml-12">
+                    <DotCustom
+                      customStyle="ml-8 w-16 h-16"
+                      logo={{
+                        imageUrl: cpcLogo,
+                        alt: 'cpc',
+                      }}
+                    />
+                  </div>
+                ),
+                children: (
+                  <SwiperCart company={content.Carts.cpc} style={'mr-52'} />
+                ),
+                style: {
+                  marginBottom: '70px',
                 },
               },
             ]}
