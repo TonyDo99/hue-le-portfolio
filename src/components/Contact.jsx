@@ -35,7 +35,7 @@ const Contact = () => {
   return (
     <section className="bg-dark_primary text-white" id="contact">
       <Toaster />
-      <div className="md:container px-5 py-14 mt-[450px]">
+      <div className="md:container px-5 py-14">
         <h2 className="title !text-white" data-aos="fade-down">
           {Contact.title}
         </h2>

@@ -49,6 +49,7 @@ import english_evident_3 from './assets/images/englishCenter/image_3.png';
 
 // import images exp cpc
 import cpc_evident_1 from './assets/images/cpc/image_1.jpg';
+import cpc_evident_2 from './assets/images/cpc/image_2.jpg';
 
 export const content = {
   nav: [
@@ -146,8 +147,23 @@ export const content = {
         logo: iso,
       },
       {
-        title: 'EUROFINS',
-        para: 'CERTIFICATE OF COMPLETION Overview of IA rule & Food Defense',
+        title: 'EF SET',
+        para: 'EF SET English Certificate 55/100 (B2 Upper Intermediate)',
+        logo: iso,
+      },
+      {
+        title: 'Risk assessment',
+        para: 'Risk assessment based on ISO 31001:2018',
+        logo: iso,
+      },
+      {
+        title: 'Awareness & Practical knowledge of Food Safety Management',
+        para: 'Awareness & Practical knowledge of Food Safety Management Systems according to ISO 22000/FSSC 22000 Ver.5.1 & HACCP 2020',
+        logo: iso,
+      },
+      {
+        title: 'Internal Audit of QMS',
+        para: 'Internal Audit of QMS based on ISO 9001:2015',
         logo: iso,
       },
     ],
@@ -277,6 +293,10 @@ export const content = {
     cpc: [
       {
         imageUrl: cpc_evident_1,
+        alt: 'cpc company hue le event',
+      },
+      {
+        imageUrl: cpc_evident_2,
         alt: 'cpc company hue le event',
       },
     ],

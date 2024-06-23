@@ -126,6 +126,28 @@ function Experiences() {
             items={[
               {
                 label: (
+                  <TimeWork props={content.WorkTimeLine.cpc} style={'pl-8'} />
+                ),
+                dot: (
+                  <div className="-ml-16">
+                    <DotCustom
+                      customStyle="ml-14 w-16 h-16"
+                      logo={{
+                        imageUrl: cpcLogo,
+                        alt: 'cpc',
+                      }}
+                    />
+                  </div>
+                ),
+                children: (
+                  <SwiperCart company={content.Carts.cpc} style={'mr-52'} />
+                ),
+                style: {
+                  marginBottom: '580px',
+                },
+              },
+              {
+                label: (
                   <TimeWork props={content.WorkTimeLine.icoc} style={'pr-8'} />
                 ),
                 dot: (
@@ -196,28 +218,6 @@ function Experiences() {
                   />
                 ),
                 children: <SwiperCart company={content.Carts.englishCenter} />,
-                style: {
-                  marginBottom: '70px',
-                },
-              },
-              {
-                label: (
-                  <TimeWork props={content.WorkTimeLine.cpc} style={'pl-8'} />
-                ),
-                dot: (
-                  <div className="-ml-12">
-                    <DotCustom
-                      customStyle="ml-8 w-16 h-16"
-                      logo={{
-                        imageUrl: cpcLogo,
-                        alt: 'cpc',
-                      }}
-                    />
-                  </div>
-                ),
-                children: (
-                  <SwiperCart company={content.Carts.cpc} style={'mr-52'} />
-                ),
                 style: {
                   marginBottom: '70px',
                 },
