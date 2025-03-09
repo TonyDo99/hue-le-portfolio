@@ -14,7 +14,8 @@ const Cetification = () => {
         <br />
         <div className="flex gap-5 justify-between flex-wrap group">
           {services.service_content.map((content, i) => (
-            <div
+            <a
+              href={content.href}
               key={i}
               data-aos="fade-up"
               data-aos-delay={i * 450}
@@ -24,7 +25,7 @@ const Cetification = () => {
               <img src={content.logo} alt="..." className="mx-auto" />
               <h6 className="my-3">{content.title}</h6>
               <p className="leading-7">{content.para}</p>
-            </div>
+            </a>
           ))}
         </div>
       </div>
