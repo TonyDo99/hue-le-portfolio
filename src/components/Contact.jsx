@@ -1,7 +1,7 @@
-import { createElement, useRef } from 'react';
-import { content } from '../Content';
-import emailjs from '@emailjs/browser';
-import toast, { Toaster } from 'react-hot-toast';
+import { createElement, useRef } from "react";
+import { content } from "../Content";
+import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const { Contact } = content;
@@ -13,22 +13,22 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
         form.current,
-        'YOUR_PUBLIC_KEY'
+        "YOUR_PUBLIC_KEY",
       )
       .then(
         (result) => {
           // Clear all input field values
           form.current.reset();
           // Success toast message
-          toast.success('Email send Successfully');
+          toast.success("Email send Successfully");
         },
         (error) => {
           console.log(error.text);
           toast.error(error.text);
-        }
+        },
       );
   };
 
@@ -62,7 +62,7 @@ const Contact = () => {
               type="email"
               name="user_email"
               pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
-              placeholder="Email Id"
+              placeholder="Email"
               required
               className="border border-slate-600 p-3 rounded"
             />

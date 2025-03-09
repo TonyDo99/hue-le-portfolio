@@ -78,11 +78,12 @@ const Skills = () => {
         <br />
         <div className="flex flex-wrap gap-4 justify-center">
           {skills.skills_content.map((skill, i) => (
-            <div
+            <a
+              href={skill.href}
               key={i}
               data-aos="fade-up"
               data-aos-delay={i * 400}
-              className="bg-white sm:cursor-pointer 
+              className="bg-white sm:cursor-pointer
                relative group w-full flex items-center
                 gap-5 p-5 max-w-sm rounded-md border-2 border-slate-200"
             >
@@ -106,7 +107,7 @@ const Skills = () => {
                   {createElement(skills.icon)}
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
