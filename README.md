@@ -1,5 +1,4 @@
-![MacBook Air - 2 (3)](/src/assets/logos/logo.png)
-![127 0 0 1_5173_ (1)](/src/assets/logos/logo.png)
+![logo](https://github.com/user-attachments/assets/5d335bbc-47ec-4fa4-8d9b-8d002d3a0ac0)
 
 # Hue Le Portfolio
 ### Vite + React + tailwind
@@ -19,13 +18,13 @@ npm run dev
 + aos scroll animation
 + and more....
 
-## youtube video link
+## Youtube video link
 [Watch now](https://youtu.be/YpFK4hUZ-NM)
 
 ## live preview link
-[See Now](https://codeaprogram-portfolio.web.app/)
+[See Now](https://hue-le-portfolio.vercel.app/)
 
-## Startup repository link
+## Author repository link
 [Repository](https://github.com/Sridhar-C-25/React_portfolio_2_startup)
 
 ## packages:
